@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College library Management</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <style>
+       html{
+        overflow-x: hidden;
+      }
+      * { margin: 0; padding: 0 }
+
+section {
+  overflow: hidden;
+  height: 100vh;
+  background: url(https://www.teahub.io/photos/full/16-168437_wallpaper-books-library-shelves-lighting-library-background-wallpaper.jpg) 50%/ cover ;
+  opacity:1;
+ 
+  
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
+ opacity: 5;
+  font: 400 20vmin/28vh cookie, cursive;
+  text-align: center;
+  padding: 40px;
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  color: #333;
+}
+
+
+/* Header styles */
+
+main {
+  position: relative;
+  text-align: center;
+  height: 108vh;
+  background: linear-gradient(to bottom, #cf8f06, #df1919);
+  color: #fff;
+ scrollbar-width: none;
+}
+
+
+main span.animated {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  height: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: #fff;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+main span::before,
+main span::after {
+  position: absolute;
+  top: -23px;
+  content: "";
+  height: 30px;
+  width: 4px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+main span::before {
+  left: -10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform:    rotate(-45deg);
+  -ms-transform:     rotate(-45deg);
+  -o-transform:      rotate(-45deg);
+  transform:         rotate(-45deg);
+}
+
+main span::after {
+  right: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  transform:         rotate(45deg);
+}
+
+ 
+ ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+            padding-bottom: 0.25px;
+            z-index: 1;  
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#para1{
+    display: inline-block;
+    border: 6px solid brown;
+    border-radius: 30px;
+    margin: auto;
+    width: 60%;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+          background-color: whitesmoke;
+            color:black;
+            font-weight: bold;
+            font-size: 15px;
+            padding:5px;
+            position: relative;
+            opacity: 0.6;
+}
+
+#img1{
+height: 260px;
+width: 400px;
+border: 4px solid black;
+}
+
+
+.mySlides{
+  margin-top: 20px;
+  height: 320px;
+  width: 300px;
+  background-position: center;
+  background-size: cover;
+  animation: image 5s infinite alternate;
+  margin: 10px;;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 3px solid black;
+}
+
+@keyframes image {
+  0% {
+    background-image: url('https://p.favim.com/orig/2019/04/10/library-aesthetic-books-Favim.com-7067304.jpg');
+  }
+  25% {
+    background-image: url('https://64.media.tumblr.com/711547365090ba4739d99c2732799ac5/tumblr_p6jvhf786t1wwdwvno1_1280.jpg');
+  }
+  50% {
+    background-image: url('https://64.media.tumblr.com/da182ed18bd880e5ed4e84e49e21ceeb/759ce09dfd606161-bb/s1280x1920/4722e57bcee7bd8fd8e2c1f80e11c7bf200b49f2.jpg');
+  }
+  75% {
+    background-image: url('https://64.media.tumblr.com/6a6b7c8d831a3b21f9594c1c448f4638/313bf18a0099d3d2-0e/s1280x1920/083f7f9af3500805b38a456ca88879fd97cc0a4c.jpg');
+  }
+  100% {
+    background-image: url('https://ychef.files.bbci.co.uk/976x549/p03gg1q5.jpg');
+  }
+ 
+}
+
+.row1 {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+#footer{
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            text-align:center;
+            background-color:black;
+            color:white;
+            padding: 3px;
+          
+        }
+     
+ a.insta{position: absolute;}
+a.fb{position: absolute;}
+a.twitter{position: absolute;}
+a.yt{position: absolute;}
+a.linkedin{position: absolute;}
+a.share{position: absolute;}
+
+
+a.insta:hover, a.insta:active{font-size: 110%; padding: 1px 2px; }
+a.fb:hover, a.fb:active{font-size: 110%; padding: 1px 2px;}
+a.twitter:hover, a.twitter:active{font-size: 110%; padding: 1px 2px;}
+a.yt:hover, a.yt:active{font-size: 120%; padding: 1px 2px;}
+a.linkedin:hover, a.linkedin:active{font-size: 110%; padding: 1px 2px;}
+a.share:hover, a.share:active{font-size: 110%; padding: 1px 2px;}
+
+
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  bottom: 125px;
+  right: 28px;
+  width: 280px;
+margin-right: 2px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.chatarea{
+  background-color:black;
+            color:white;
+            padding: 3px;
+            width: 100%;
+}
+
+
+.bgimg {
+    background-image: url('https://img.wallpapersafari.com/phone/640/1136/25/26/Du3mJS.jpg');
+}
+
+#Gallery::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container {
+  position: relative;
+  width: 25%;
+  float: left; 
+ padding: 5px;
+}
+
+.image1 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+}
+
+.image2 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+}
+.image3 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+}
+
+.image4 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 260px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid maroon;
+}
+.middle1 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middle2 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middle3 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middle4 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .image1 {
+  opacity: 0.3;
+}
+.container:hover .image2 {
+  opacity: 0.3;
+}
+.container:hover .image3 {
+  opacity: 0.3;
+}
+.container:hover .image4 {
+  opacity: 0.3;
+}
+
+.container:hover .middle1 {
+  opacity: 1;
+}
+
+.container:hover .middle2 {
+  opacity: 1;
+}
+.container:hover .middle3 {
+  opacity: 1;
+}
+.container:hover .middle4 {
+  opacity: 1;
+}
+
+.text1 {
+  background-color: #d1994f;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.text2 {
+  background-color: #d1994f;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.text3 {
+  background-color: #d1994f;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.text4 {
+  background-color: #d1994f;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.FAQ{
+  margin-left: 10px;
+  
+}
+
+#FAQ{
+  margin-left: 0px;
+  
+}
+
+#Contact{
+  margin-left: 10px;
+  
+}
+
+  </style>
+</head>
+<body>
+    <section>
+        <h2  aria-multiline='true'><b> Welcome <br> to <br> Library </b></h2>
+        </section>
+        <div >
+          <ul >
+              <li><a  href="#">Home</a></li>
+              <li><a  href="#About">About</a></li>
+              <li><a  href="bookpage.html">Books</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="#Gallery">Gallery</a></li>
+              <li><a  href="#Contact">Contact</a></li>
+              <li><a  href="#FAQ">FAQ</a></li>
+              <li><a  href="Donation.html">Donate</a></li>
+            </ul>
+          </div>
+<main> 
+ 
+      <div id="About">
+        <center>
+          <font color="white" size=4><marquee direction="right" loop="infinite" scrollamount="10" width="100%" bgcolor="red" >ASK HERE FOR ANY QUERY! <br> How to reach us: <a href="mailto: abc@example.com" class=email style="color: white; text-decoration:none; ">&#9993;Email here</a> </marquee></font></center>
+        <font face="Brush Script MT" color="white" ><p style="font-size:48.5px">~~~~ABOUT~~~~</p></font>
+      <div>
+      <img src="https://c4.wallpaperflare.com/wallpaper/526/8/1002/library-books-interior-design-shelves-wallpaper-thumb.jpg"; id="img1"></div>
+      <p id="para1" >
+          Library is an integral part of M.Y.O.L started at the time of its inception in 2007. It was started with acquisitions of curriculum text books to serve students. Objective of library is to support in fulfilling the information need of parent institute, build and preserve collection of specialized literature in S&T fields. It has been functioning under the supervisory of Library advisory committee constituted by the head of the institution. The Chairperson of library advisory committee works as Faculty in-charge of library and Librarian in-charge as secretary for the committee
+<br><br>
+Library opens throughout the year from 9:00 AM - 9:00 PM (9:00 AM - 5:30 PM on statutory holidays).
+<br><br>
+Open access system is facilitated and every year there used to be physical stock verification of library collection
+        </p>
+        <br> 
+        
+          </div>
+        </div>
+        </div> 
+      </main>
+  
+      <div class="row1">
+        <div class="column" style="background-color:  rgb(190, 183, 119); height: auto;">
+          <div class="mySlides"></div>
+          </div>
+        <div class="column" style="background-color: khaki; height: auto;" ;>
+         <center>
+           <br>
+          <p>Library plays a vital role in the search of knowledge. It serves as the workspace for the entire College – students and faculty alike. <br><br>
+            M.Y.O.L College Library aims to support the teaching learning activity in the college and also provide the students updated knowledge and to ensure the optimum utilization of the available resources. Our mission is “Know the ropes, learn the ropes” which itself signifies the importance of Library in the College environment.It means Know a subject well, know the ins and outs about it.This term has a maritime history; sailors adept at their trade knew the various ways to tie knots. Someone who “knows the ropes” is well-acquainted with some topic.
+          
+          </p>
+          </center> 
+</div>
+</div>
+
+<div class="bgimg" >
+<br>
+<div>
+<u><h1>DISTINCT FEATURES OF LIBRARY</h1> </u>   
+<ol> 
+        <li> Two library cards are given to the students at the time of admission to borrow textbooks, General books & Periodicals.</li><br>
+        <li>Annual membership to Ex–students of the College</li><br>
+        <li>Reading membership to external graduates pursuing professional courses.
+        </li><br>
+        <li>Visiting membership to the students of other Colleges to use the Library for their reference work.</li><br>
+        <li>A Voice recorder has been kept in the library to record notes and reading material for Blind students. </li><br>
+        <li>Open access is offered to library's collection</li><br>
+        <li>Regular display of new arrivals in the library; Newspaper cuttings on Career guidance, current topics.
+        </li><br>
+        <li>Free Internet access to students and staff. A separate hub for internet access is installed in the library.</li><br>
+        <li>Books are purchased on recommendation of Staff and Students. </li><br>
+        <li>The library is secured with three CCTV cameras.</li><br>
+        <li>The Library also offers internship to the candidates’ pursuing Master in Library and Information Science.</li><br>
+        <li>The Library sends its staff for training to upgrade them. </li><br>
+        <li>At the circulation counter, two computers, one wireless barcode reader and barcode printer are available for the ease of computerized circulation system.</li><br>
+        <li>The Research Center / Staff reading room is equipped with three computers and one printer. It is also stocked with reference books. The library also procures books as per the requirements of research students as well as lecturers who are doing the Ph.D..  </li><br>
+        <li>  Books are also purchased through UGC grants and kept in separate cupboards purchased under the grant.</li><br><br>
+        <li>A Photocopy machine is also available in the library. </li><br>
+        <li>  Librarian’s cabin is equipped with one computer and one all in one printer-scanner and copier machine. 
+        </li><br>
+        <li>A Projector Screen is available in the library which is used for students’ presentation, screening of documentaries. </li><br>
+      </ol>
+</div>
+<br><br>
+
+<br>
+<hr size=5px>
+<div>
+  <u><h1>LIBRARY RULES</h1> </u>  
+  <ol type="i">
+    <li>  All students must make use of the library facility to enrich their academic excellence.  </li><br>
+    <li>Only bonafide members are allowed to enter the college library on the strength of a valid Identity Card, which must be produced as and when it is demanded by the library staff or college teaching staff. </li><br>
+    <li>Complete silence must be maintained in & near the library.  </li><br>
+    <li>Students should not bring eatables inside the library.  </li><br>
+    <li>Using the Cell Phone in the Library is strictly prohibited.. </li><br>
+    <li>Infringement of the library rules will result in the withdrawal of the library facility from the students. </li><br>
+    <li>All cases of the violation of rules will be reported to the Principal for suitable action. </li><br>
+    <li>In case of any difficulty, readers can approach the Librarian.  </li><br>
+    <li>Co-operation of the students is earnestly sought in observing the rules. </li><br>
+  </ol>
+</div>
+<div id="Gallery" >
+    <br><br>
+    <hr size=5px>
+  <u><h1>GALLERY</h1> </u>  
+  <div class="container">
+    <img src="https://www.historycolorado.org/sites/default/files/media/images/2018/Z0020876_1.jpg" alt="reading room" class="image1" style="width:100%">
+    <div class="middle1">
+      <div class="text1">Reading Room</div>
+    </div></div><br>
+    <div class="container">
+    <img src="https://blogs.loc.gov/catbird/files/2019/08/reference_assistance_room.jpg" alt="reference assistance room" class="image2" style="width:100%">
+    <div class="middle2">
+      <div class="text2">Reference Assistance Room</div>
+    </div></div><br>
+    <div class="container">
+    <img src="https://www.colorado.edu/cinemastudies/sites/default/files/styles/large_wide_thumbnail/public/callout/seminar.jpg" alt="projection room" class="image3" style="width:100%">
+    <div class="middle3">
+      <div class="text3">Projection Room</div>
+    </div></div><br>
+    <div class="container">
+    <img src="
+    https://st.hzcdn.com/simgs/pictures/home-offices/amagansett-beach-retreat-kitchens-and-baths-linda-burkhardt-img~55c1f5540d9b1312_4-3138-1-3d2a9bc.jpg" alt="librarian cabin" class="image4" style="width:100%">
+    <div class="middle4">
+      <div class="text4">Librarian Cabin</div>
+    </div></div>
+</div>
+
+<div id="FAQ">
+  <br><br>
+  <hr size=5px>
+<u><h1>FAQ</h1> </u>  
+<div class="FAQ">
+  <b>Q.-When are the libraries open?</b> <br>
+<p><b>Ans-</b>Please consult the individual library home pages for hours, locations, and phone numbers. Generally, all libraries are open throughout the year from 9:00 AM - 9:00 PM (9:00 AM - 5:30 PM on statutory holidays)  After-hours access may be arranged by specific library.</p>
+
+<b>Q.-Where do I check books out?</b> <br>
+  <p><b>Ans-</b>Books may be checked out at any M.Y.O.L. branch’s circulation desk. Since some “sub-locations” of larger libraries are not regularly staffed, you may need to check with the librarian in your local branch for specific procedures. Not all books can be checked out, for example, reference works, rare books, and materials listed for Special Collections do not circulate and must be used in the relevant library's reading room.</p>
+
+  <b>Q.-How many books can I check out?</b> <br>
+<p><b>Ans-</b>Within reason, as many books as needed may be checked out. Not all books can be checked out, for example, reference works, rare books, and materials listed for Special Collections do not circulate and must be used in the relevant library's reading room.</p>
+
+<b>Q.-How long does it take to get a book/article?</b> <br>
+<p><b>Ans-</b>Depending on the M.Y.O.L library we are borrowing from, M.Y.O.L books and articles can arrive in two days. Interlibrary loan items may take a minimum of two weeks.</p>
+
+<b>Q.-What is the loan period for M.Y.O.L books?</b> <br>
+<p><b>Ans-</b>For permanent members, titles can be borrowed for six months. For temporary members, the loan period is 30 days.</p>
+
+<b>Q.-How do I figure out what titles are owned by the Libraries?</b> <br>
+<p><b>Ans-</b>The library collections are fully searchable using the SIRIS online catalog of the combined collections available at reference assistance room. You may ask from Librarian present at the moment.</p>
+
+<b>Q.-Where do I return titles I have borrowed?</b> <br>
+<p><b>Ans-</b>You can return books to any M.Y.O.L location.</p>
+</div>
+</div>
+<hr size=5px>
+<div id="Contact">
+<u> <h4>Get in touch with us</h4></u> 
+The Librarian <br>
+M.Y.O.L College Library <br>
+  Contact us: XXXXXXXXXX <br>
+  Locations-: abcdefg 000000 <br>
+  email for query: <b>abc@example.com </b> or <b>mno@example.com </b> 
+  <br><br>
+  <div align="center" id="home">
+    <button > <a href="#" style=" color: rgb(0, 0, 0);text-decoration:none;">Go to Top</a></button>
+  </div>
+</div>
+<br>
+</div>
+
+<div align="right" style="background-color: rgb(129, 207, 190);" >
+  <button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+<form class="form-container">
+<center> <h1>Chat</h1></center> 
+
+ <center> <label for="msg"><b>Message</b></label></center>
+  <textarea placeholder="Type message.." name="msg" required></textarea>
+  <button type="submit" class="btn">Send</button>
+  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+</div>
+</div>
+
+<script>
+
+function openForm() {
+document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+<div id="footer">
+  <h5 style="text-align: center;">Made By Nishtha Gupta </h5>
+  <p>Contact us: XXXXXXXXXX <br>email for query:abc@example.com<br>Copyright &copy; 2021, My Website<p><pre><a href="https://www.instagram.com" class="insta"><i class="bi bi-instagram" style="font: size 25px; color: purple;" ></i></a>   <a href="https://www.facebook.com" class="fb" ><i class="bi bi-facebook" style="font: size 25px; color: rgb(28, 117, 201);" ></i></a>   <a href="https://www.twitter.com" class="twitter"><i class="bi bi-twitter" style="font: size 25px; color: rgb(0, 22, 224);" ></i></a>   <a href="https://www.youtube.com" class="yt"><i class="bi bi-youtube" style="font: size 25px; color: rgb(238, 10, 10);" ></i></a>   <a href="https://www.linkedin.com" class="linkedin"><i class="bi bi-linkedin" style="font: size 25px; color: rgb(235, 211, 211);" ></i></a>   <a href="#" class="share"><i class="bi bi-share" style="font-size: 15px; color: teal;"></i></a></pre>
+</div>
+</body>
+</html>

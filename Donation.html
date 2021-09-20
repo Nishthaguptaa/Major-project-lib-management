@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONATION</title>
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+         html{
+        overflow-x: hidden;
+        
+      }
+      * { margin: 0; padding: 0 }
+         #header{
+            margin-top: -10px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            text-align: center;
+            background-color:black;
+            color:white;
+            padding:10px;
+
+        }
+
+        .intro {
+  position: relative;
+  padding: 10px;
+  align-content: center;
+  display:inline-block;
+    margin: auto;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+}
+
+.imageintro {
+  opacity: 1;
+  display: block;
+  height: 350px;
+  margin: auto;
+  top: 0px;
+            left: 0px;
+            width: 60%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 4px solid rgb(240, 150, 66);
+    border-radius: 10px;
+  
+}
+
+.middleintro {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intror:hover .imageintro {
+  opacity: 0.3;
+}
+
+.intro:hover .middleintro {
+  opacity: 1;
+}
+
+.textintro {
+  background-color: #d68249;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 10px;
+}
+
+body{
+            padding-top: 10px;
+            background-attachment: scroll;
+            background-repeat: no-repeat;
+            background-image:url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-pure-aesthetic-orange-gradient-watercolor-background-backgroundsplash-backgroundwatercolorfashion-backgroundgradientsmoke-image_69855.jpg);
+            background-size: cover;
+            background-position: center;
+            max-width: 100%;
+            text-align: center;
+            margin:0 auto ;
+        }
+
+#footer{
+            bottom:0px;
+            left: 0px;
+            margin-top: 15px;
+            height: 145px;
+            width: 100%;
+            text-align:center;
+            background-color:black;
+            color:white;
+            padding: 0%;
+        }
+
+        a.insta{position: absolute;}
+a.fb{position: absolute;}
+a.twitter{position: absolute;}
+a.yt{position: absolute;}
+a.linkedin{position: absolute;}
+a.share{position: absolute;}
+
+
+a.insta:hover, a.insta:active{font-size: 110%; padding: 1px 2px; }
+a.fb:hover, a.fb:active{font-size: 110%; padding: 1px 2px;}
+a.twitter:hover, a.twitter:active{font-size: 110%; padding: 1px 2px;}
+a.yt:hover, a.yt:active{font-size: 120%; padding: 1px 2px;}
+a.linkedin:hover, a.linkedin:active{font-size: 110%; padding: 1px 2px;}
+a.share:hover, a.share:active{font-size: 110%; padding: 1px 2px;}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div align="center" div id="header">
+        <h1>Donation page</h1>
+    </div>
+    <div>
+    <nav align="center">
+        <font face = "Comic sans MS" size ="6""> Hi there!</font><br>
+        <font face = "Comic sans MS" size ="5"> Welcome , Donate Books For someone else to read! </font></nav>
+        
+        <center><div class="intro">
+            <img src="https://data.whicdn.com/images/352854282/original.jpg" alt="introduction" class="imageintro" >
+            <div class="middleintro">
+              <div class="textintro">
+             <h3>BOOKS SPACE</h3>
+              A PLATFORM TO SHARE YOUR BOOKS TO OTHERS TO WIDEN THEIR IMAGINATION <BR>
+            </div>
+            </div>
+          </div></center>
+        
+        <center> <div>
+          <div>
+            First Name<input type="text" name="first-name" 
+            placeholder="Enter first name" autocomplete="off"> Last Name <input type="text"  name="last-name"
+            placeholder="Enter last name" autocomplete="off">
+          </div> 
+        
+        <br>
+        <div>
+            <label>gender</label>
+            <select name ="gender">
+            <option disabled selected value>- select - </option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            </select>
+            </div>
+            <br>
+            <div>
+              age:<input type="text" name="age" placeholder="Enter your age">  birthday: <input type="date" name="birthday"
+              >
+            </div> 
+    <br>
+    <div>
+      Email:<input type="text" name="email" autocomplete="off">  Contact: <input type="text"  name="contact" autocomplete="off"
+      >
+    </div> 
+       
+<div>
+    Address 1 <br><textarea name="address1" cols="40" rows="2" autocomplete="off"></textarea>
+</div>
+<div>
+    Address 2 <br><textarea name="address2" cols="40" rows="3" autocomplete="off"></textarea>
+</div>
+   
+<div>
+  City: <input type="text" name="City" autocomplete="off"> State: <select type="text" name="States" id="selectopt"> <option disabled selected value>- select an option - </option><option value="Gujarat">Gujarat</option>
+    <option value="Punjab">Punjab</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Rajasthan">Rajasthan</option>
+    <option value="Orissa">Orissa</option>
+    <option value="Bihar">Bihar</option>
+    <option value="Kerala">Kerala</option>
+    <option value="Tamil Nadu">Tamil Nadu</option>
+    <option value="West Bengal">West Bengal</option>
+    <option value="Andhra Pradesh">Andhra Pradesh</option>
+    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+    <option value="Assam">Assam</option>
+    <option value="Karnataka">Karnataka</option>
+    <option value="Chhattisgarh">Chhattisgarh</option>
+    <option value="Goa">Goa</option>
+    <option value="Haryana">Haryana</option>
+    <option value="Himachal Pradesh">Himachal Pradesh</option>
+    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+    <option value="Jharkhand">Jharkhand</option>
+    <option value="Madhya Pradesh">Madhya Pradesh</option>
+    <option value="Maharashtra">Maharashtra</option>
+    <option value="Manipur">Manipur</option>
+    <option value="Meghalaya">Meghalaya</option>
+    <option value="Mizoram">Mizoram</option>
+    <option value="Nagaland">Nagaland</option>
+    <option value="Sikkim">Sikkim</option>
+    <option value="Tripura">Tripura</option>
+    <option value="Uttar Pradesh">Uttar Pradesh</option>
+    <option value="Uttarakhand">Goa</option>
+  </select> Zip: <input type="text" name="Zip" autocomplete="off">
+</div> 
+        
+        <div>
+            Message: <br><textarea name="message" cols="90" rows="10" autocomplete="off"></textarea>
+        </div>
+        
+        <div>
+        <input type="checkbox" name="Agree" >Agree to terms & conditions
+        </div>
+<br>
+
+<div>
+    <button onclick="myFunction()" >Donate Now</button>
+    <button> <a href="collegelibrary.html" style=" color: rgb(0, 0, 0);text-decoration:none;"> Back Home</a></button>
+</div> 
+
+        <br>
+    </center>
+    
+	<script>
+ 
+  function myFunction() {
+
+		 alert("Donation done successfully !"); 
+         window.location.reload(); 
+    }
+   
+
+   
+    </script>
+
+<div id="footer">
+    <h5 style="text-align: center;">Made By Nishtha Gupta </h5>
+    <p>Contact us: XXXXXXXXXX <br>email for query:abc@example.com<br>Copyright &copy; 2021, My Website<p><pre><a href="https://www.instagram.com" class="insta"><i class="bi bi-instagram" style="font: size 25px; color: purple;" ></i></a>   <a href="https://www.facebook.com" class="fb" ><i class="bi bi-facebook" style="font: size 25px; color: rgb(28, 117, 201);" ></i></a>   <a href="https://www.twitter.com" class="twitter"><i class="bi bi-twitter" style="font: size 25px; color: rgb(0, 22, 224);" ></i></a>   <a href="https://www.youtube.com" class="yt"><i class="bi bi-youtube" style="font: size 25px; color: rgb(238, 10, 10);" ></i></a>   <a href="https://www.linkedin.com" class="linkedin"><i class="bi bi-linkedin" style="font: size 25px; color: rgb(235, 211, 211);" ></i></a>   <a href="#" class="share"><i class="bi bi-share" style="font-size: 15px; color: teal;"></i></a></pre>
+</div>
+
+</body>
+</html>
