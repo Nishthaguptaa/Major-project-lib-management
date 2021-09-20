@@ -22,3 +22,5 @@ Notes:
 -Created other html site(Donation,blog,bookpage) which leads to mainpage that is collegelibrary.html. There are other sections within mainpage.
 
 -Pages are responsive and images are added for better visualisation.
+
+-Created footer with different icons which has hover-active style link .
